@@ -14,7 +14,7 @@ function NewsFeedContent() {
   useEffect(() => {
     dispatch(getFollowingPosts());
     
-    // Animation effect
+    // Add animation method
     const timer = setTimeout(() => {
       setAnimationProgress(100);
     }, 300);
