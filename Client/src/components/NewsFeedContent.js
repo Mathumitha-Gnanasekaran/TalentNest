@@ -116,7 +116,7 @@ function NewsFeedContent() {
         <PostCompose />
       </div>
       
-      {/* Following Posts Header */}
+      
       <div style={{
         textAlign: 'center',
         marginTop: '2rem',
