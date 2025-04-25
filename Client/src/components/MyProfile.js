@@ -18,7 +18,7 @@ function MyProfile(props) {
   const postList = useSelector((state) => state.checkProfileReducer.postList);
   const userInfo = useSelector((state) => state.checkProfileReducer.profileInfo);
 
-  // Animation state
+  
   const [animationProgress, setAnimationProgress] = useState(0);
 
   // States for profile management
