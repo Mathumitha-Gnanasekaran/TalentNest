@@ -212,7 +212,7 @@ function NewsFeedContent() {
         )}
       </div>
       
-      {/* Decorative elements */}
+      {/* Decorative methods */}
       <div style={{
         position: 'fixed',
         bottom: '0',
