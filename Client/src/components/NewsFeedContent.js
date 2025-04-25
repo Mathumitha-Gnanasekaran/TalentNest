@@ -88,7 +88,7 @@ function NewsFeedContent() {
         transition: 'transform 0.8s, opacity 0.8s',
       }}>
         <div style={{
-          backgroundColor: '#ff23',
+          backgroundColor: '#ffff',
           padding: '0.75rem',
           borderRadius: '0.75rem',
           marginRight: '1rem',
