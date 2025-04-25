@@ -141,7 +141,7 @@ function FollowerList() {
               {storeFollowerAccounts ? (
                 storeFollowerAccounts.map((followerAccount) => {
                   return (
-                    <FollowerAccountItem
+                    <Follower
                       key={followerAccount.id}
                       id={followerAccount.id}
                       firstName={followerAccount.firstName}
