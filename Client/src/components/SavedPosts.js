@@ -163,7 +163,7 @@ function SavedPosts() {
                 />
                 <Button
                   variant="danger"
-                  size="sm"
+                  size=""
                   onClick={() => handleUnsavePost(postItem.id)}
                   style={{ marginTop: "10px" }}
                 >
