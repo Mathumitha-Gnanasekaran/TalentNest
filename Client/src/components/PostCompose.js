@@ -29,7 +29,7 @@ function PostCompose() {
   const [MultiImagesUrl, setMultiImagesUrl] = useState(null);
   const [file64String, setFile64String] = useState(null);
   const [file64StringWithType, setFile64StringWithType] = useState(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); //issues
   
   // New state for post type dropdown
   const [isTypeDropdownOpen, setIsTypeDropdownOpen] = useState(false);
