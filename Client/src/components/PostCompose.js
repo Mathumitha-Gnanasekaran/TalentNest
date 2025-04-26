@@ -84,13 +84,7 @@ function PostCompose() {
       color: "#8b5cf6",
       placeholder: "Share a helpful resource or tutorial..."
     },
-    {
-      id: "discussion",
-      name: "Start Discussion",
-      icon: <MessageCircle size={18} />,
-      color: "#64748b",
-      placeholder: "What's on your mind to discuss?"
-    }
+    
   ];
   
   var marray = [];
