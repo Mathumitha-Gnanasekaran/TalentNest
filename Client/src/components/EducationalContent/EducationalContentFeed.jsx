@@ -12,7 +12,7 @@ const EducationalContentFeed = ({ userId }) => {
   const [showPDFViewer, setShowPDFViewer] = useState(false);
   const [selectedPDFContent, setSelectedPDFContent] = useState(null);
   
-  // States for updating content
+  // updating content state
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [contentToUpdate, setContentToUpdate] = useState(null);
   const [updatedTitle, setUpdatedTitle] = useState('');
