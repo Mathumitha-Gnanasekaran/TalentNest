@@ -149,7 +149,7 @@ function PostCompose() {
           share: null,
           comment: null,
           images: MultiImagesUrl, // Multiple media files (images and videos)
-          // Added post type to the payload
+          
           postType: selectedPostType.id
         },
       });
