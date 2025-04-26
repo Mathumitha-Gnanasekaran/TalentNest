@@ -70,7 +70,13 @@ function PostCompose() {
       color: "#ec4899",
       placeholder: "Show off your latest work or project..."
     },
-    
+    {
+      id: "event",
+      name: "Event/Meetup",
+      icon: <Compass size={18} />,
+      color: "#3b82f6",
+      placeholder: "Share an event or gathering..."
+    },
     {
       id: "resource",
       name: "Learning Resource",
