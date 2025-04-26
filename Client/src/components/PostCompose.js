@@ -42,13 +42,7 @@ function PostCompose() {
   
   // Post options types
   const postTypes = [
-    {
-      id: "insight",
-      name: "Share Insight",
-      icon: <Lightbulb size={18} />,
-      color: "#6366f1",
-      placeholder: "Share your knowledge or insights..."
-    },
+    
     {
       id: "question",
       name: "Ask Question",
