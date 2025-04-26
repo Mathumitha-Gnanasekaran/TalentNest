@@ -18,7 +18,7 @@ function EducationalContentPage() {
   
   return (
     <div className="app-container">
-      {/* Animated background elements */}
+      {/*Added Animated background elements */}
       <div style={{
         position: 'fixed',
         inset: 0,
