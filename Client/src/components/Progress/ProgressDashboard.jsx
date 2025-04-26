@@ -11,7 +11,6 @@ const ProgressDashboard = ({ userId }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [animationProgress, setAnimationProgress] = useState(0);
   
-  // Fetch all progress items for the user
   const fetchProgressItems = async () => {
     const _id = localStorage.getItem("psnUserId");
 
