@@ -74,7 +74,7 @@ export default function CookingSkillsLanding() {
       {/* Content container */}
       <div style={{
         position: 'relative',
-        zIndex: 10,
+        zIndex:10,
         width: '100%',
         maxWidth: '1152px',
         padding: '4rem 1rem',

@@ -14,7 +14,7 @@ function NewsFeedContent() {
   useEffect(() => {
     dispatch(getFollowingPosts());
     
-    // Animation effect
+    // Add animation method
     const timer = setTimeout(() => {
       setAnimationProgress(100);
     }, 300);
@@ -116,7 +116,7 @@ function NewsFeedContent() {
         <PostCompose />
       </div>
       
-      {/* Following Posts Header */}
+      
       <div style={{
         textAlign: 'center',
         marginTop: '2rem',
@@ -153,7 +153,7 @@ function NewsFeedContent() {
         display: "flex",
         flexDirection: "column",
         gap: "1.5rem",
-        //maxWidth: '900px',
+        
         //width:'50vw',
         margin: '0 auto',
         opacity: animationProgress / 100,
@@ -212,7 +212,7 @@ function NewsFeedContent() {
         )}
       </div>
       
-      {/* Decorative elements */}
+      {/* Decorative methods */}
       <div style={{
         position: 'fixed',
         bottom: '0',
