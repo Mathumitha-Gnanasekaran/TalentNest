@@ -32,13 +32,7 @@ function PostCompose() {
   const [isHovered, setIsHovered] = useState(false);
   
   // New state for post type dropdown
-  const [isTypeDropdownOpen, setIsTypeDropdownOpen] = useState(false);
-  const [selectedPostType, setSelectedPostType] = useState({
-    id: "insight",
-    name: "Share Insight",
-    icon: <Lightbulb size={18} />,
-    color: "#6366f1"
-  });
+  
   
   // Post options types
   const postTypes = [
