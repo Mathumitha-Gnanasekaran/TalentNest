@@ -30,6 +30,7 @@ function PostCompose() {
   const [file64String, setFile64String] = useState(null);
   const [file64StringWithType, setFile64StringWithType] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
+  
   // New state for post type dropdown
   const [isTypeDropdownOpen, setIsTypeDropdownOpen] = useState(false);
   const [selectedPostType, setSelectedPostType] = useState({

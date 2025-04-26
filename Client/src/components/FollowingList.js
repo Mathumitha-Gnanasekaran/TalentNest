@@ -20,7 +20,7 @@ function FollowingList() {
     
     dispatch(getFollowingAccounts());
     
-    // Animation effect
+    // Animation effect change
     const timer = setTimeout(() => {
       setAnimationProgress(100);
     }, 500);
