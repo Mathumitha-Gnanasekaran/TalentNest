@@ -1,0 +1,53 @@
+.setimg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0.5rem;
+    margin-left: 12rem;
+}
+.settinglist {
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    margin-top: 1rem;
+    margin-left: 30rem;
+}
+.name1{
+    margin-left: 12rem;
+    font-size: 20px;
+}
+.box{
+    padding: 10px;
+}
+.item1{
+    display: flex;
+}
+.icon1{
+    font-size: 25px;
+    margin-top: 0.7rem;
+}
+.icontxt{
+    margin-left: 1rem;
+    font-size: 17px;
+}
+.gall1{
+    width: 145px;
+    height: 145px;
+}
+.edit{
+    background-color: aquamarine;
+    padding: 0.1rem;
+    border-radius: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+.etxt{
+    margin-left: 11rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}

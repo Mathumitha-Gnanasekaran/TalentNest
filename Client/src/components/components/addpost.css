@@ -1,0 +1,35 @@
+.addpost {
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    margin-top: 1rem;
+    margin-left: 30rem;
+}
+.form{
+    margin-top: 2rem;
+}
+.posttxt{
+    font-size: 18px;
+    margin-top: 1rem;
+}
+.inputtxt{
+    margin-left: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+.row{
+    display: flex;
+}
+.postbtn{
+    margin-top: 2rem;
+    margin-left: 10rem;
+}
+.button{
+    height: 30px;
+    width: 100px;
+    background-color: aquamarine;
+    border-radius: 15px;
+}

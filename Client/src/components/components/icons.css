@@ -1,0 +1,87 @@
+.like {
+    font-size: 25px;
+}
+
+.comment {
+    font-size: 30px;
+    margin-left: 1rem;
+}
+
+.foot {
+    display: flex;
+    background-color: white;
+    display: flex;
+    box-shadow: 1px -1px 30px 3px rgba(0, 0, 0, 0.10);
+    -webkit-box-shadow: 1px -1px 30px 3px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 1px -1px 30px 3px rgba(0, 0, 0, 0.10);
+    padding: 0.5rem;
+}
+
+.friend {
+    font-size: 25px;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    list-style: none;
+    color: white;
+}
+
+.logout {
+    margin-left: 2rem;
+    font-size: 25px;
+    list-style: none;
+    color: white;
+}
+
+.addfriend {
+    font-size: 25px;
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+    list-style: none;
+    color: white;
+}
+
+.friendlist {
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: -4px 2px 9px 4px rgba(0, 0, 0, 0.28);
+    margin-top: 1rem;
+    margin-left: 30rem;
+}
+
+.userrow {
+    padding: 2px;
+    margin: 0.5rem;
+    display: flex;
+}
+
+.frienddp {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+.name{
+    margin-left: 1rem;
+    font-size: 18px;
+    font-weight: bold;
+}
+.followbutton{
+    background-color: aquamarine;
+    margin: 0.2rem;
+    height: 38px;
+    width: 100px;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+}
+.text{
+    margin-top: 0.6rem;
+    margin-left: 1.3rem;
+}
+.row{
+    width: 400px;
+    display: flex;
+}
