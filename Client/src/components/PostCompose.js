@@ -40,7 +40,7 @@ function PostCompose() {
     color: "#6366f1"
   });
   
-  // Post type options
+  // Post options types
   const postTypes = [
     {
       id: "insight",
