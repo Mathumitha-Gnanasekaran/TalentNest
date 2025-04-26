@@ -24,7 +24,7 @@ const EducationalContentShare = ({ userId }) => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // The form's default submit will be prevented, and we'll use the onClick handler instead
+    // The form's default submit will be prevented and we'll use the onClick handler instead
   };
 
   const handleButtonClick = async () => {
