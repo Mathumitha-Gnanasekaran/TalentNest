@@ -44,7 +44,7 @@ function PostCompose() {
   const postTypes = [
     {
       id: "insight",
-      name: "Share Insight",
+      name: "Share Insight", //kavinilavan
       icon: <Lightbulb size={18} />,
       color: "#6366f1",
       placeholder: "Share your knowledge or insights..."
