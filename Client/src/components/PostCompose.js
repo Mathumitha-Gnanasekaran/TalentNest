@@ -143,7 +143,7 @@ function PostCompose() {
           id: null,
           userId: localStorage.getItem("psnUserId"),
           content: inputContent,
-          image: file64StringWithType, // Single image (from the original upload method)
+          image: file64StringWithType, // Single image 
           createdAt: null,
           love: null,
           share: null,
