@@ -28,7 +28,7 @@ const EducationalContentShare = ({ userId }) => {
   };
 
   const handleButtonClick = async () => {
-    if (uploading) return; // Prevent multiple clicks while uploading
+    if (uploading) return; //To Prevent multiple clicks while uploading
     
     setUploading(true);
     setMessage('');
