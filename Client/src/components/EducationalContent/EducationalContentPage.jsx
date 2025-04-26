@@ -66,7 +66,7 @@ function EducationalContentPage() {
         ))}
       </div>
 
-      {/* Logo and Title */}
+      {/* Logo and Title included*/}
       <div style={{ 
         display: 'flex', 
         alignItems: 'center',
