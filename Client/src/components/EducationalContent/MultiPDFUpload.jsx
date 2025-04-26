@@ -12,7 +12,7 @@ function MultiPDFUpload(props) {
     const [selectedPDF, setSelectedPDF] = useState(null);
 
     useEffect(() => {
-        // Only process files if there are new ones
+        // Only process the files if there are new ones
         if (pdfFiles.length > 0) {
             processFiles();
         }
