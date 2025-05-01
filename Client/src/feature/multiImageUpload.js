@@ -10,7 +10,6 @@ function MultiImageUpload(props) {
     const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
-        // Only process files if there are new ones
         if (media.length > 0) {
             processFiles();
         }
