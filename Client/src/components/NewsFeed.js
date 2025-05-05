@@ -19,7 +19,7 @@ function NewsFeed() {
     localStorage.removeItem("psnUserEmail");
     navigate("/s");
   }
-
+//newsfeed
   useEffect(() => {
     if (localStorage.getItem("psnToken") === null) {
       navigate("/unauthorized");
