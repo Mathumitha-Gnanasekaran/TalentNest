@@ -81,8 +81,6 @@ public class PostController {
         return new ResponseEntity<>(postService.isPostSaved(request), HttpStatus.OK);
     }
 
-    // Add these endpoints to the existing PostController class
-
     @PostMapping("/progress/create")
     public ResponseEntity<ResponseObjectService> createProgress(@RequestBody ProgressEntity progress) {
         return new ResponseEntity<>(postService.createProgress(progress), HttpStatus.OK);
