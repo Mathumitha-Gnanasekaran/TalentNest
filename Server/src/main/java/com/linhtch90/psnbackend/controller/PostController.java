@@ -101,10 +101,7 @@ public class PostController {
         return new ResponseEntity<>(postService.updateProgress(progress), HttpStatus.OK);
     }
 
-    @PostMapping("/progress/delete")
-    public ResponseEntity<ResponseObjectService> deleteProgress(@RequestBody DoubleIdObjectEntity ids) {
-        return new ResponseEntity<>(postService.deleteProgress(ids), HttpStatus.OK);
-    }
+    
 
     @PostMapping("/progress/following")
     public ResponseEntity<ResponseObjectService> getFollowingProgress(@RequestBody IdObjectEntity userId) {
