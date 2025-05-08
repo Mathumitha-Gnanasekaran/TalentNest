@@ -157,7 +157,7 @@ function PostItem(props) {
       id: props.postId,
       content: editedContent,
       images: editedImages,
-      postType: editedPostType // Include post type in the update payload
+      postType: editedPostType
     };
 
     axios({
