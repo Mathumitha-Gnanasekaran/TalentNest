@@ -258,7 +258,7 @@ function PostItem(props) {
 
   const [isSaved, setIsSaved] = useState(false);
 
-  // Add an effect to check if the post is already saved when component mounts
+
   useEffect(() => {
     checkIfPostIsSaved();
   }, []);
