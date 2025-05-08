@@ -148,9 +148,7 @@ function PostItem(props) {
     setShowEditModal(true);
   };
 
-  const handleEditModalClose = () => {
-    setShowEditModal(false);
-  };
+  
 
   const handleEditSubmit = () => {
     const updatedPostData = {
