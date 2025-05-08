@@ -46,12 +46,7 @@ function PostItem(props) {
   
   // Post type definitions
   const postTypes = {
-    insight: {
-      id: "insight",
-      name: "Insight",
-      icon: <Lightbulb size={16} />,
-      color: "#6366f1"
-    },
+    
     question: {
       id: "question",
       name: "Question",
