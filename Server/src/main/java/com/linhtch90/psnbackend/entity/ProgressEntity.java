@@ -15,25 +15,5 @@ import lombok.NoArgsConstructor;
 @Document(collection = "progress")
 public class ProgressEntity {
     @Id
-    private String id;
-
-    private String userId;
-
-    private String title;
-
-    private String description;
-
-    private Double initialValue;
-
-    private Double currentValue;
-
-    private Double targetValue;
-
-    private String unit;
-
-    private String category;
-
-    private Instant createdAt;
-
-    private Instant updatedAt;
+    
 }
