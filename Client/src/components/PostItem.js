@@ -314,7 +314,7 @@ function PostItem(props) {
 
   return (
     <div style={{
-    
+      background: 'white',
       borderRadius: '12px',
       boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
       margin: '20px 0',
