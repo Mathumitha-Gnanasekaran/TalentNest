@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Spinner } from 'react-bootstrap';
-import { LineChart, BarChart, User } from 'lucide-react';
+import { LineChart as LineChartIcon, BarChart as BarChartIcon, User, Search, Download, Filter, PieChart, List, Grid } from 'lucide-react';
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart as RechartsPieChart, Pie, Cell } from 'recharts';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 const ProgressDashboard = ({ userId }) => {
   const [progressItems, setProgressItems] = useState([]);
@@ -61,10 +64,26 @@ const ProgressDashboard = ({ userId }) => {
   
   // Filter progress items by category
   const getFilteredItems = () => {
-    if (selectedCategory === 'all') {
-      return progressItems;
+    let filtered = progressItems;
+    
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(item => item.category === selectedCategory);
     }
-    return progressItems.filter(item => item.category === selectedCategory);
+    
+    if (searchQuery.trim() !== '') {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(item => 
+        (item.title && item.title.toLowerCase().includes(query)) ||
+        (item.category && item.category.toLowerCase().includes(query)) ||
+        (item.user && (
+          item.user.firstName.toLowerCase().includes(query) ||
+          item.user.lastName.toLowerCase().includes(query) ||
+          item.user.email.toLowerCase().includes(query)
+        ))
+      );
+    }
+    
+    return filtered;
   };
   
   // Get statistics
