@@ -18,7 +18,7 @@ const ProgressTracker = ({ userId }) => {
     targetValue: 0,
     unit: 'minutes',
     category: 'Basic Cooking',
-    userId: userId
+    userId: localStorage.getItem("psnUserId")
   });
 
   // Predefined cooking-related categories
@@ -58,6 +58,7 @@ const ProgressTracker = ({ userId }) => {
     'Cultural Dishes'
   ];
 
+  // Fetch all progress items for the user
   const fetchProgressItems = async () => {
     const _id = localStorage.getItem("psnUserId");
     try {
@@ -241,7 +242,6 @@ const ProgressTracker = ({ userId }) => {
     setEditMode(false);
   };
 
-
   // Load progress data on component mount and start animations
   useEffect(() => {
     fetchProgressItems();
@@ -320,117 +320,6 @@ const ProgressTracker = ({ userId }) => {
           {error}
         </div>
       )}
-
-<Search size={18} style={{ color: '#ffff', marginRight: '0.5rem' }} />
-          <input 
-            type="text" 
-            placeholder="Search progress items..." 
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            style={{
-              backgroundColor: 'transparent',
-              border: 'none',
-              color: '#ffff',
-              outline: 'none',
-              width: '100%',
-              fontSize: '0.9rem'
-            }}
-          />
-        </div>
-        
-        {/* Right buttons */}
-        <div style={{
-          display: 'flex',
-          gap: '1rem'
-        }}>
-          {/* View toggle */}
-          <div style={{
-            display: 'flex',
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-            borderRadius: '2rem',
-            overflow: 'hidden',
-            backdropFilter: 'blur(5px)'
-          }}>
-            <button
-              style={{
-                backgroundColor: viewMode === 'grid' ? '#f97316' : 'transparent',
-                border: 'none',
-                padding: '0.5rem',
-                cursor: 'pointer',
-                color: '#ffff',
-                transition: 'all 0.3s ease',
-                display: 'flex',
-                alignItems: 'center'
-              }}
-              onClick={() => setViewMode('grid')}
-              title="Grid View"
-            >
-              <Grid size={18} />
-            </button>
-            <button
-              style={{
-                backgroundColor: viewMode === 'list' ? '#f97316' : 'transparent',
-                border: 'none',
-                padding: '0.5rem',
-                cursor: 'pointer',
-                color: '#ffff',
-                transition: 'all 0.3s ease',
-                display: 'flex',
-                alignItems: 'center'
-              }}
-              onClick={() => setViewMode('list')}
-              title="List View"
-            >
-              <List size={18} />
-            </button>
-          </div>
-          
-          {/* Charts toggle */}
-          <button
-            style={{
-              backgroundColor: showCharts ? '#f97316' : 'rgba(255, 255, 255, 0.1)',
-              border: 'none',
-              borderRadius: '2rem',
-              padding: '0.5rem 1rem',
-              cursor: 'pointer',
-              color: '#ffff',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              fontSize: '0.9rem',
-              transition: 'all 0.3s ease',
-              backdropFilter: 'blur(5px)'
-            }}
-            onClick={() => setShowCharts(!showCharts)}
-          >
-            <BarChartIcon size={18} />
-            {showCharts ? 'Hide Charts' : 'Show Charts'}
-          </button>
-          
-          {/* PDF Download button */}
-          <button
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              border: 'none',
-              borderRadius: '2rem',
-              padding: '0.5rem 1rem',
-              cursor: 'pointer',
-              color: '#ffff',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              fontSize: '0.9rem',
-              transition: 'all 0.3s ease',
-              backdropFilter: 'blur(5px)'
-            }}
-            onClick={downloadPDF}
-          >
-            <Download size={18} />
-            Export PDF
-          </button>
-        </div>
-      </div>
-
       
       {/* Form for adding/editing progress */}
       {showForm && (
@@ -485,7 +374,7 @@ const ProgressTracker = ({ userId }) => {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label>Initial Time</label>
                 <input
                   type="number"
@@ -496,7 +385,7 @@ const ProgressTracker = ({ userId }) => {
                   placeholder="Starting time"
                   required
                 />
-              </div>
+              </div> */}
               
               <div className="form-group">
                 <label>Current Time</label>
