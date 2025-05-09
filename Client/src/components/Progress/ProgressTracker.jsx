@@ -35,7 +35,6 @@ const ProgressTracker = ({ userId }) => {
     'Cultural Cuisines'
   ];
 
-  // Common cooking time units
   const timeUnits = [
     'minutes',
     'hours',
@@ -44,7 +43,6 @@ const ProgressTracker = ({ userId }) => {
     'recipes'
   ];
 
-  // Example cooking skill titles
   const skillExamples = [
     'Knife Handling',
     'Chopping Vegetables',
@@ -58,7 +56,6 @@ const ProgressTracker = ({ userId }) => {
     'Cultural Dishes'
   ];
 
-  // Fetch all progress items for the user
   const fetchProgressItems = async () => {
     const _id = localStorage.getItem("psnUserId");
     try {
@@ -86,7 +83,6 @@ const ProgressTracker = ({ userId }) => {
     }
   };
 
-  // Create a new progress item
   const createProgress = async (e) => {
     e.preventDefault();
     try {
@@ -112,7 +108,6 @@ const ProgressTracker = ({ userId }) => {
     }
   };
 
-  // Update an existing progress item
   const updateProgress = async (e) => {
     e.preventDefault();
     try {
@@ -139,7 +134,6 @@ const ProgressTracker = ({ userId }) => {
     }
   };
 
-  // Delete a progress item
   const deleteProgress = async (progressId) => {
     try {
       const response = await axios.post(
@@ -165,12 +159,10 @@ const ProgressTracker = ({ userId }) => {
     }
   };
 
-  // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     let processedValue = value;
     
-    // Convert numeric inputs to numbers
     if (['initialValue', 'currentValue', 'targetValue'].includes(name)) {
       processedValue = parseFloat(value) || 0;
     }
@@ -178,14 +170,12 @@ const ProgressTracker = ({ userId }) => {
     setCurrentProgress({ ...currentProgress, [name]: processedValue });
   };
 
-  // Calculate progress percentage
   const calculateProgress = (current, initial, target) => {
     if (target === initial) return 0;
     const progress = ((current - initial) / (target - initial)) * 100;
     return Math.min(Math.max(progress, 0), 100); // Clamp between 0-100
   };
 
-  // Edit a progress item
   const handleEdit = (progress) => {
     setCurrentProgress(progress);
     setEditMode(true);
@@ -193,7 +183,6 @@ const ProgressTracker = ({ userId }) => {
     window.scrollTo(0, 0);
   };
 
-  // Update current value (quick update)
   const handleQuickUpdate = async (progressId, newValue) => {
     const progressToUpdate = progressItems.find(item => item.id === progressId);
     if (!progressToUpdate) return;
@@ -226,7 +215,6 @@ const ProgressTracker = ({ userId }) => {
     }
   };
 
-  // Reset form state
   const resetForm = () => {
     setCurrentProgress({
       title: '',
@@ -242,11 +230,9 @@ const ProgressTracker = ({ userId }) => {
     setEditMode(false);
   };
 
-  // Load progress data on component mount and start animations
   useEffect(() => {
     fetchProgressItems();
     
-    // Animation effect
     const timer = setTimeout(() => {
       setAnimationProgress(100);
     }, 300);
@@ -255,9 +241,7 @@ const ProgressTracker = ({ userId }) => {
   }, [userId]);
   return (
     <div className="progress-tracker">
-      {/* Background decoration */}
       <div className="background-decoration">
-        {/* Circular elements */}
         {[...Array(10)].map((_, i) => (
           <div 
             key={i}
@@ -273,7 +257,6 @@ const ProgressTracker = ({ userId }) => {
           />
         ))}
         
-        {/* Background shapes */}
         {[...Array(5)].map((_, i) => (
           <div 
             key={`shape-${i}`}
@@ -290,7 +273,6 @@ const ProgressTracker = ({ userId }) => {
         ))}
       </div>
 
-      {/* Header */}
       <div className="header" style={{
         opacity: animationProgress / 100,
         transform: `translateY(${(1 - animationProgress / 100) * 20}px)`,
@@ -301,7 +283,6 @@ const ProgressTracker = ({ userId }) => {
         <h1>COOKING PROGRESS TRACKER</h1>
       </div>
 
-      {/* Add/Cancel button */}
       <div className="add-button-container" style={{
         opacity: animationProgress / 100,
         transform: `translateY(${(1 - animationProgress / 100) * 15}px)`,
@@ -321,7 +302,6 @@ const ProgressTracker = ({ userId }) => {
         </div>
       )}
       
-      {/* Form for adding/editing progress */}
       {showForm && (
         <div className="form-container" style={{
           opacity: animationProgress / 100,
