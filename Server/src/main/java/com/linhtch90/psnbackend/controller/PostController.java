@@ -76,10 +76,12 @@ public class PostController {
         return new ResponseEntity<>(postService.getSavedPosts(userId), HttpStatus.OK);
     }
 
+    
     @PostMapping("/ispostsaved")
     public ResponseEntity<ResponseObjectService> isPostSaved(@RequestBody SavePostRequest request) {
         return new ResponseEntity<>(postService.isPostSaved(request), HttpStatus.OK);
     }
+
 
     @PostMapping("/progress/create")
     public ResponseEntity<ResponseObjectService> createProgress(@RequestBody ProgressEntity progress) {
