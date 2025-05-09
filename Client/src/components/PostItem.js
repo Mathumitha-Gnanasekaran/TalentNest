@@ -157,7 +157,7 @@ function PostItem(props) {
       id: props.postId,
       content: editedContent,
       images: editedImages,
-      postType: editedPostType // Include post type in the update payload
+      postType: editedPostType
     };
 
     axios({
@@ -258,7 +258,7 @@ function PostItem(props) {
 
   const [isSaved, setIsSaved] = useState(false);
 
-  // Add an effect to check if the post is already saved when component mounts
+
   useEffect(() => {
     checkIfPostIsSaved();
   }, []);
