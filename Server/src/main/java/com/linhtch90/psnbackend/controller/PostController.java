@@ -85,7 +85,7 @@ public class PostController {
 
     @PostMapping("/progress/create")
     public ResponseEntity<ResponseObjectService> createProgress(@RequestBody ProgressEntity progress) {
-        return new ResponseEntity<>(postService.createProgress(), HttpStatus.OK);
+        return new ResponseEntity<>(postService.createProgress(progress), HttpStatus.OK);
     }
 
     @PostMapping("/progress/user")
